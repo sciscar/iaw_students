@@ -7,6 +7,10 @@ SET time_zone = "+01:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
+create database mydb;
+create user 'ordinaria'@'%' identified with mysql_native_password by 'ordinaria_pass';
+grant all on mydb.* to 'ordinaria'@'%';
+use  mydb;
 
 CREATE TABLE `Student` (
   `id` int(11) NOT NULL,
